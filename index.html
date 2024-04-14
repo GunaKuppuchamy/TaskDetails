@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Schedular</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .btn {
+            height: 30px;
+            width: 50px;
+            margin: 5px;
+            border: 5px;
+            border-radius: 10px;
+            background-color: green;
+        }
+
+        .btnnn {
+            height: 30px;
+            width: 50px;
+            margin: 5px;
+            border: 5px;
+            border-radius: 10px;
+            background-color: red
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="d1"> -->
+    <!-- <input class="input" type="text" id="task" name="task" placeholder="Task" value="" required><br> -->
+    <select name="task" id="task" class="input" required>
+        <option value="">Task</option>
+        <option value="Meeting">Meeting</option>
+        <option value="Project-abc">Project-abc</option>
+        <option value="Personal Break">Personal Break</option>
+        <!-- <option value=""></option> -->
+    </select><br>
+    <!-- </div> -->
+    <!-- <div class="d2"> -->
+    <input class="input" type="text" id="description" name="description" placeholder="Description" value=""
+        required><br>
+    <!-- </div> -->
+    <div class="time">
+        <div class="d4" id="d4"><button id="btn" class="btn" onclick="timer(0)">Start</button></div>
+        <div class="timer">
+            <p id="sw">00:00:00</p>
+        </div>
+        <div class="d4" id="d4"><button id="btn1" class="btn" onclick="reset()">reset</button></div>
+    </div>
+    <div><button class="btn" onclick="add(0)">Add</button></div>
+
+    <div class="d1">
+        <select name="filter" id="filter" class="btn">
+            <option value="">Filter All</option>
+            <option value="Meeting">Meeting</option>
+            <option value="Project-abc">Project-abc</option>
+            <option value="Personal Break">Personal Break</option>
+            <!-- <option value=""></option> -->
+        </select><button class="btn" onclick="add(1)">Apply</button>
+        <div class="d3">
+            <table id="tb2"></table>
+        </div>
+    </div>
+    <table id="tb1" class="tb1">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th>Duration</th>
+            </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
