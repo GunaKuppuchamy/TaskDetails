@@ -2,14 +2,19 @@
     /* display: flex;
     position: absolute; */
     height: 30px;
-    width: 150px;
+    width: 200px;
     margin: 5px;
     border-radius: 10px;
-    border-color: gray;
+    border-color: black;
+    /* background-color: white; */
+    /* opacity: 0.1; */
     /* border: 0px; */
     /* border: 30px; */
-
+    background-color: transparent;
+    opacity: 1;
 }
+
+.ds {}
 
 .df {
     display: flex;
@@ -25,7 +30,7 @@
 
 .d5 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .timer {
@@ -37,14 +42,20 @@
     padding: 5px;
     /* color: whitesmoke; */
     margin: 5px;
-    border: 5px dashed gray;
+    border: 5px solid gray;
     /* border-color: pink; */
     border-radius: 50%;
     /* background-color: green; */
 }
 
+#sw {
+    border: 2px double gray;
+}
+
 .d1 {
     display: flex;
+    justify-content: center;
+    opacity: 0.9;
 }
 
 .d4 {
@@ -56,7 +67,9 @@
 }
 
 .tb1 tr {
-
-    background-color: aqua;
+    color: black;
+    border: 2px;
+    border-radius: 80%;
+    background-color: transparent;
     border-color: black;
 }

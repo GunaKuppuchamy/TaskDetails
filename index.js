@@ -121,7 +121,7 @@ function add(n) {
         // table.remove();
 
         const obj = { task: a, description: b, timer: c }
-        if (a != "" && b != "") {
+        if (a != "" && b != "" && c != "00:00:00") {
             arobj.unshift(obj);
             document.getElementById("description").value = "";
             document.getElementById("task").value = "";
@@ -133,14 +133,14 @@ function add(n) {
         </tr>`
             table.innerHTML += rw;
             ts();
-            //         arobj.map((data) => {
-            //             var row = `<tr>
-            //     <td>${data.task}</td>
-            //     <td>${data.description}</td>
-            //     <td>${data.timer}</td>
-            // </tr>`
-            //             table.innerHTML += row;
-            //         })
+            arobj.map((data) => {
+                var row = `<tr>
+                <td>${data.task}</td>
+                <td>${data.description}</td>
+                <td>${data.timer}</td>
+            </tr>`
+                table.innerHTML += row;
+            })
 
         }
     } else {
