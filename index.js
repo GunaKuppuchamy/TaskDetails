@@ -133,14 +133,14 @@ function add(n) {
         </tr>`
             table.innerHTML += rw;
             ts();
-            arobj.map((data) => {
-                var row = `<tr>
-                <td>${data.task}</td>
-                <td>${data.description}</td>
-                <td>${data.timer}</td>
-            </tr>`
-                table.innerHTML += row;
-            })
+            // arobj.map((data) => {
+            //     var row = `<tr>
+            //     <td>${data.task}</td>
+            //     <td>${data.description}</td>
+            //     <td>${data.timer}</td>
+            // </tr>`
+            //     table.innerHTML += row;
+            // })
 
         }
     } else {
@@ -199,7 +199,7 @@ function edit(x) {
     console.log(t);
     document.getElementById("sw").innerText = formatedTime;
     document.getElementById("d4").innerHTML = "";
-    document.getElementById("d4").innerHTML += `<button id="btn" class="btn" onclick="timer(1,${t[0]},${t[1]},${t[2]})">Start</button>`
+    document.getElementById("d4").innerHTML += `<button id="btn" class="btn" onclick="timer(${t[0]},${t[1]},${t[2]})">Start</button>`
 
     // console.log(1);
     // document.getElementById("demo").innerHTML = x;
