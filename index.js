@@ -119,7 +119,8 @@ function add(n) {
   .map((data, originalIndex) => ({ data, originalIndex })) // Attach original index
   .filter(({ data }) => data.status === a);
 //   console.log(arr[0].data.task);
-            // console.log(arr);
+            console.log(arr);
+        arr.sort((a, b) => new Date(a.data.deadline) - new Date(b.data.deadline));
             arr.map((data,index) => {
                 var row = `<tr>
 <td>${arr[index].data.task}</td>
