@@ -4,16 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Schedular</title>
+    <title>Task Details</title>
+    <link rel="icon"
+        href="https://www.ilink-digital.com/wp-content/uploads/2019/11/cropped-Logo-iLink-Digital-With-Tagline-h100px-e1573205711363-32x32.png"
+        sizes="32x32" />
     <link rel="stylesheet" href="index.css">
     <style>
         .btn {
             height: 30px;
-            width: 50px;
+            width: 100px;
             margin: 5px;
             border: 5px;
             border-radius: 10px;
             background-color: green;
+        }
+
+        .btn:hover {
+            background-color: lightgreen;
+            transition: 0.8s;
+        }
+
+
+        #addd {
+            display: block;
+        }
+
+        #editt {
+            background-color: rgb(6, 197, 6);
+            display: none;
         }
 
         .btnnn {
@@ -32,72 +50,47 @@ background-attachment: fixed;
 background-position: center;
 background-size: cover;width: 90%;
 height: 100%;">
-    <!-- <div class="d1"> -->
-    <!-- <input class="input" type="text" id="task" name="task" placeholder="Task" value="" required><br> -->
-    <div class="d5">
+    <div class="d1">
+        <div style="position: fixed; top: 95%;left: 95%; ;">
+            <a href="index.html"><img src="Top.png" alt="Go to top" width="50%"></a>
+
+        </div>
+        <h1>Task Management Application</h1>
         <div>
+            <form id="form">
+                <input name="task" id="task" class="input" placeholder="Enter Task" value="" required><br>
+                <textarea class="tarea" id="description" name="description" rows="5" cols="40"
+                    placeholder="Type your description here..." required value=""></textarea><br>
+                <input class="input" id="date" name="date" type="date" value="" required>
+        </div>
+        <div><button class="btn" id="addd" onclick="add(0)">Add</button>
+            <button class="btn" id="editt" onclick="update()">edit</button>
+        </div>
 
-            <select name="task" id="task" class="input" required>
-                <option value="">Task</option>
-                <option value="Meeting">Meeting</option>
-                <option value="Project-abc">Project-abc</option>
-                <option value="Personal Break">Personal Break</option>
-                <!-- <option value=""></option> -->
-            </select><br>
-            <!-- </div> -->
-            <!-- <div class="d2"> -->
-            <input class="input" type="text" id="description" name="description" placeholder="Description" value=""
-                required>
-        </div>
-        <!-- <br> -->
-        <!-- </div> -->
-        <div class="time">
-            <div class="d4" id="d4"><button id="btn" class="btn" onclick="timer(0)">Start</button></div>
-            <div class="timer">
-                <p id="sw">00:00:00</p>
-            </div>
-            <div class="d4" id="d4"><button id="btn1" class="btn" onclick="reset()">reset</button></div>
-        </div>
+        </form>
+
     </div>
-    <div class="d1">
-
-
-        <div><button class="btn" onclick="add(0)">Add</button></div>
-
-
-        <select name="filter" id="filter" class="btn">
-            <option value="">Filter All</option>
-            <option value="Meeting">Meeting</option>
-            <option value="Project-abc">Project-abc</option>
-            <option value="Personal Break">Personal Break</option>
-            <!-- <option value=""></option> -->
-        </select><button class="btn" onclick="add(1)">Apply</button>
-        <div class="d3">
-            <table id="tb2"></table>
+    <div class="d2">
+        <div class="d3"> <select name="filter" id="filter" class="btn">
+                <option id="filter" value="">Filter All</option>
+                <option id="filter" value="Pending">Pending</option>
+                <option id="filter" value="Completed">Completed</option>
+            </select>
+            <button class="btn" onclick="add(1)">Apply</button>
+            <button class="btn" onclick="clearFilter()">Clear Filters</button>
         </div>
-    </div>
-    <div class="d1">
+
         <table id="tb1" class="tb1" border="1">
             <tr>
                 <th>Task</th>
                 <th>Description</th>
-                <th>Duration</th>
+                <th>Deadline</th>
+                <th>status</th>
+                <th>Action</th>
             </tr>
 
         </table>
     </div>
-
-
-
-
-
-
-
-
-
-
-
     <script src="index.js"></script>
 </body>
-
 </html>
